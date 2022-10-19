@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Insert element in array</title>
+</head>
+<script>
+
+//normal way
+
+    // let data = [10,12,1,33,99]
+    // let newelement = 6
+    // let pos = 2
+
+    // console.warn("before inserting",data)
+    // for(let i = data.length-1;i>=0;i--){
+        
+    //     if(i>=pos){
+    //         data[i+1] = data[i]
+    //        if(i==pos){
+    //         data[i] = newelement
+    //        }
+    //     }
+    // }
+    // console.log("before inserting",data);
+
+    //dynamic way
+
+    function insertEl()
+    {
+        let data = [10,12,1,33,99]
+
+         console.warn("before inserting",data)
+
+        let newelement = document.getElementById('newelement').value
+        newelement = parseInt(newelement)
+         let pos = document.getElementById('pos').value
+
+        
+        for(let i = data.length-1;i>=0;i--){
+        
+            if(i>=pos){
+                data[i+1] = data[i]
+                if(i==pos){
+                    data[i] = newelement
+               }
+           }
+        }
+        console.log("after inserting",data);
+    }
+
+
+    //interview question 
+    // which is the javascript function gives above feature
+
+    // let arr = [21,4,434,5,6]
+
+    // arr.splice(2,0,44)
+
+</script>
+<body>
+    <input type="text" id="pos" placeholder="enter position">
+    <input type="text" id="newelement" placeholder="enter new element">
+    <button onclick="insertEl()">Insert</button>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Binary search by iterative approch</title>
+    <script>
+      let data = [22, 34, 66, 78, 99, 343, 4343, 3433434, 3434343434];
+      let start = 0;
+      let end = data.length - 1;
+
+      let position = undefined;
+      let find = 3433434;
+
+      while (start <= end) {
+        let mid = Math.floor((start + end) / 2);
+        if (data[mid] === find) {
+          position = mid;
+          break;
+        } else if (data[mid] < find) {
+          start = mid + 1;
+        } else {
+          end = mid - 1;
+        }
+      }
+      console.log(position);
+    </script>
+  </head>
+  <body></body>
+</html>

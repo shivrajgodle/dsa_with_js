@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>stack with input box & button</title>
+    <script>
+      let data = [];
+      let currentsize = data.length;
+      let max = 5;
+
+      function push() {
+        let newval = document.getElementById("newel").value;
+        if (currentsize >= max) {
+          alert("stack is full");
+        } else {
+          data[currentsize] = newval;
+          currentsize += 1;
+          document.getElementById("newel").value = "";
+          console.warn("element added");
+        }
+      }
+
+      function pop() {
+        if (currentsize > 0) {
+          currentsize -= 1;
+          data.length = currentsize;
+          console.warn("element removed");
+        } else {
+          alert("stack is already empty");
+        }
+      }
+
+      function display() {
+        for (let i = 0; i <= currentsize - 1; i++) {
+          console.log(data[i]);
+        }
+      }
+
+      push(19);
+      push(32);
+      push(2);
+
+      pop();
+    </script>
+  </head>
+  <body>
+    <input type="text" placeholder="enter element" id="newel" />
+    <button onclick="push()">Add new element</button> &nbsp;
+    <button onclick="pop()">remove latest element</button>
+    <button onclick="display()">display elements</button>
+  </body>
+</html>

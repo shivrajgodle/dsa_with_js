@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title>Bubblw Sort</title>
+    <script>
+        let data = [12,6,76,2,232,5,65]
+        console.log("array before sorting:-",data);
+        for(let i=0;i<data.length;i++){
+           
+            for(let j = 0;j<data.length;j++){
+                console.log(data);
+                if(data[j]>data[j+1]){
+                    let temp = data[j];
+                    data[j] = data[j+1];
+                    data[j+1]=temp;
+                }
+            }
+        }
+        console.log("sorted array:-",data);
+</script>
+</head>
+<body>
+    
+</body>
+</html>

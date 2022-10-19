@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>merge array</title>
+    <script>
+
+
+        // Easy way
+
+        // let data = [34,565,34,23,15]
+        // let data2 = [77,6,2,567,89]
+        // let data3 = []
+        // for(let i=0;i<data.length;i++){
+        //     data3[i] = data[i]
+        // }
+
+        // for(let i=0;i<data.length;i++){
+        //     data3[data.length+i] = data2[i]
+        // }
+
+        // console.log(data3);
+
+
+        //By Using while loop
+
+        let data = [3 , 4 ,7 ,23 , 66 , 77]
+        let data2 = [5 , 6 ,8 ,88]
+        let data3 = []
+
+        let d1 = 0;
+        let d2 = 0;
+        let d3 = 0;
+        
+        while( d1 < data.length){
+            if(data[d1]<data2[d2]){
+                data3[d3] = data[d1]
+                d1++;
+                
+            }
+            else{
+                data3[d3] = data2[d2]
+                d2++;
+                
+            }
+            d3++;
+        }
+        console.log(data3);
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

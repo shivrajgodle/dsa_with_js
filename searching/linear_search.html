@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+    <script>
+      //   let data = [34, 45, 2, 657, 34, 90, 1, 232];
+      //   let find = 45;
+      //   let pos = undefined;
+
+      //   for (let i = 0; i <= data.length; i++) {
+      //     if (data[i] == find) {
+      //       pos = i;
+      //       break;
+      //     }
+      //   }
+      //   console.log("data is:", data);
+      //   console.log("position is", pos);
+
+      function search() {
+        let data = [34, 45, 2, 657, 34, 90, 1, 232];
+        let find = document.getElementById("el").value;
+        let pos = undefined;
+
+        for (let i = 0; i <= data.length; i++) {
+          if (data[i] == find) {
+            pos = i;
+            break;
+          }
+        }
+        console.log("data is:", data);
+        console.log("position is", pos);
+        if (!pos) {
+          alert("element not found");
+        } else {
+          alert("element found on position " + pos);
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <input
+      type="text"
+      id="el"
+      placeholder="enter element which you want to find"
+    />
+    <button onclick="search()">Search</button>
+  </body>
+</html>

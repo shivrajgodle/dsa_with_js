@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+    <script>
+      let data = [];
+      let currentSize = data.length;
+      let max = 5;
+
+      function push(newval) {
+        if (currentSize >= max) {
+          alert(
+            "sorry you cant add " + newval + "because stack limit exceeded"
+          );
+        }
+        data[currentSize] = newval;
+        currentSize += 1;
+      }
+
+      function pop() {
+        if (currentSize > 0) {
+          currentSize -= 1;
+          data.length = currentSize;
+        } else {
+          alert("already empty");
+        }
+      }
+
+      push(20);
+      push(6);
+      push(50);
+      //   push(80);
+      //   push(23);
+      //   push(25);
+      //   push(27);
+      pop();
+      pop();
+      push(80);
+      push(23);
+
+      console.log(data);
+    </script>
+  </head>
+  <body></body>
+</html>

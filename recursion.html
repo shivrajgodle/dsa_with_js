@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Recursion</title>
+    <script>
+        // function apple(x){
+        //     console.log("apple",x);
+
+        //     if(x<10){
+        //         apple(x+1)
+        //     }
+          
+        // }
+        // let data = 0;
+        // apple(data)
+
+
+        function fact(x){
+
+            if(x==0){
+                return 1;
+            }
+
+            return x * fact(x-1);
+        }
+
+        let value = 2;
+       console.log(fact(value)); 
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

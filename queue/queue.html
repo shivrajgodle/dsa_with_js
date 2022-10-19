@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Queue</title>
+    <script>
+      let queue = [];
+      let currentSize = queue.length;
+      let maxSize = 5;
+
+      function enqueue(val) {
+        if (currentSize >= maxSize) {
+          alert("queue is full");
+        } else {
+          queue[currentSize] = val;
+          currentSize++;
+        }
+      }
+
+      function dequeue() {
+        if (currentSize > 0) {
+          for (let i = 0; i < queue.length; i++) {
+            queue[i] = queue[i + 1];
+          }
+          currentSize--;
+          queue.length = currentSize;
+        } else {
+          alert("queue is already empty");
+        }
+      }
+
+      function display() {
+        console.log(queue);
+      }
+
+      function front() {
+        console.log(queue[0]);
+      }
+
+      function rear() {
+        console.log(queue[currentSize - 1]);
+      }
+
+      enqueue(10);
+      enqueue(13);
+      enqueue(40);
+      enqueue(12);
+
+      dequeue();
+      display();
+    </script>
+  </head>
+  <body></body>
+</html>

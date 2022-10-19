@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>delete element in array</title>
+</head>
+<script>
+    // let data = [12,323,545,53,6]
+    // let pos = 2;
+    // console.log("before",data);
+    // for(let i=pos;i<=data.length-1;i++){
+    //     data[i] = data[i+1];
+      
+    // }
+    // data.length = data.length-1;
+    // console.log("after",data)
+
+    //dynamic way by text box
+
+    function remove()
+    {
+
+    let data = [12,323,545,53,6];
+    let pos = document.getElementById('pos').value;
+    pos = parseInt(pos);
+    console.log("before",data);
+
+    for(let i=pos;i<=data.length-1;i++){
+        data[i] = data[i+1];
+      
+    }
+    data.length = data.length-1;
+    console.log("after",data)
+
+    }
+
+
+
+</script>
+<body>
+    <input type="text" placeholder="enter position" id="pos">
+    <button onclick="remove()">remove element</button>
+</body>
+</html>
